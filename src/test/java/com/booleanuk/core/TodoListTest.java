@@ -45,6 +45,14 @@ class TodoListTest {
 
         String uncompletedTestString = "\nRead\n";
         Assertions.assertEquals(todoList.getTasks(false), uncompletedTestString);
+    }
 
+    @Test
+    public void testSearchForTaskReturnsMessageIfTaskExistsOrNot() {
+        String result = todoList.searchForTask("Walk the dog");
+        Assertions.assertEquals(result, "Found");
+
+        result = todoList.searchForTask("Exercise");
+        Assertions.assertEquals(result, "Not found");
     }
 }

@@ -41,6 +41,10 @@ public class TodoList {
         return result.toString();
     }
 
+    public String searchForTask(String message) {
+        return "";
+    }
+
     // Helper method.
     private Boolean doesListContainKey(String key) {
         return this.list.containsKey(key);
