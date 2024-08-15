@@ -31,7 +31,14 @@ public class TodoList {
     }
 
     public String getCompletedTasks() {
-        return "";
+        StringBuilder result = new StringBuilder("\n");
+
+        for (Map.Entry<String, Boolean> item : this.list.entrySet()) {
+            if (item.getValue().equals(true)) {
+                result.append(item.getKey()).append("\n");
+            }
+        }
+        return result.toString();
     }
 
     // Helper method.
