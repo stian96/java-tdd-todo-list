@@ -14,4 +14,8 @@ public class TodoList {
         list.put(message, false);
     }
 
+    public String seeAllTasks() {
+        return "";
+    }
+
 }

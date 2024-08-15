@@ -17,9 +17,9 @@
 
 
 
-| Requirement | Method                    | Return | Note                                                                                                                       |
-|-------------|---------------------------|--------|----------------------------------------------------------------------------------------------------------------------------|
-| **1**       | `addTask(String message)` | `void` | Adds a task to the list and sets the boolean value to 'false' as default, <br/> indicating that the task is not completed. |
-| **2**       | `seeAllTasks()`           | `void` | Prints out all the tasks in the list.                                                                                      |
-| **3**       |                           |        |                                                                                                                            |
-|             |                           |        |                                                                                                                            |
+| Requirement | Method                    | Return   | Note                                                                                                                       |
+|-------------|---------------------------|----------|----------------------------------------------------------------------------------------------------------------------------|
+| **1**       | `addTask(String message)` | `void`   | Adds a task to the list and sets the boolean value to 'false' as default, <br/> indicating that the task is not completed. |
+| **2**       | `seeAllTasks()`           | `String` | Returns all the tasks nicely formatted as a string.                                                                        |
+| **3**       |                           |          |                                                                                                                            |
+|             |                           |          |                                                                                                                            |
