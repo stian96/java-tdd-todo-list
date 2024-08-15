@@ -27,6 +27,7 @@
 | **6**       | `searchForTask(String message)`                    | `String`            | Search for a specific task and returns a message indicating if it exists or not.                                                          |
 | **7**       | `removeTask(String message)`                       | `void`              | Removes the specified task from the task list.                                                                                            |
 | **8**       | `getTasksInAscendingOrder()`                       | `ArrayList<String>` | Returns all the tasks ordered alphabetically in ascending order                                                                           |
+| **9**       | `getTasksInDescendingOrder()`                      | `ArrayList<String>` | Returns all the tasks ordered alphabetically in descending order                                                                          |
 
 
 

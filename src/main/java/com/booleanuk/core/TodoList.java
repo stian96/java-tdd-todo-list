@@ -54,6 +54,10 @@ public class TodoList {
         return resultList;
     }
 
+    public ArrayList<String> getTasksInDescendingOrder() {
+        return new ArrayList<>();
+    }
+
     // Helper method.
     private Boolean doesListContainKey(String key) {
         return this.list.containsKey(key);

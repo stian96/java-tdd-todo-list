@@ -69,4 +69,10 @@ class TodoListTest {
         ArrayList<String> tasksInAlphabeticOrder = todoList.getTasksInAscendingOrder();
         Assertions.assertEquals("Make dinner", tasksInAlphabeticOrder.getFirst());
     }
+
+    @Test
+    public void testGetTaskInDescendingOrderReturnsInDescendingOrder() {
+        ArrayList<String> tasksInDescendingOrder = todoList.getTasksInDescendingOrder();
+        Assertions.assertEquals("Walk the dog", tasksInDescendingOrder.getFirst());
+    }
 }
