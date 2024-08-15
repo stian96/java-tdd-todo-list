@@ -1,8 +1,6 @@
 package com.booleanuk.core;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TodoList {
     public Map<String, Boolean> list;
@@ -51,7 +49,9 @@ public class TodoList {
     }
 
     public ArrayList<String> getTasksInAscendingOrder() {
-        return new ArrayList<>();
+        ArrayList<String> resultList = new ArrayList<>(this.list.keySet());
+        Collections.sort(resultList);
+        return resultList;
     }
 
     // Helper method.
