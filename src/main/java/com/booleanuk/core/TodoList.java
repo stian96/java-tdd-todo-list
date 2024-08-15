@@ -2,6 +2,7 @@ package com.booleanuk.core;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class TodoList {
     public Map<String, Boolean> list;
@@ -15,7 +16,11 @@ public class TodoList {
     }
 
     public String seeAllTasks() {
-        return "";
+        StringBuilder result = new StringBuilder("\n");
+        for (Object item : list.keySet()) {
+            result.append(item).append("\n");
+        }
+        return result.toString();
     }
 
 }

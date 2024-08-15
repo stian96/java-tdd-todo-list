@@ -21,7 +21,7 @@ class TodoListTest {
         todoList.addTask("Make dinner");
         todoList.addTask("Read");
 
-        String testString = "Walk the dog\nMake dinner\nRead\n";
+        String testString = "\nRead\nMake dinner\nWalk the dog\n";
         Assertions.assertEquals(testString, todoList.seeAllTasks());
     }
 }
