@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 class TodoListTest {
     TodoList todoList = new TodoList();
 
@@ -60,5 +62,11 @@ class TodoListTest {
     public void testIfRemoveTaskRemovesTaskFromTaskList() {
         todoList.removeTask("Walk the dog");
         Assertions.assertFalse(todoList.list.containsKey("Walk the dog"));
+    }
+
+    @Test
+    public void testGetTasksInAscendingOrderReturnsInAlphabeticOrder() {
+        ArrayList<String> tasksInAlphabeticOrder = todoList.getTasksInAscendingOrder();
+        Assertions.assertEquals("Make dinner", tasksInAlphabeticOrder.getFirst());
     }
 }

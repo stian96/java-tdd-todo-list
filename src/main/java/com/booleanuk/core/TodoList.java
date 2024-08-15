@@ -1,5 +1,6 @@
 package com.booleanuk.core;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -47,6 +48,10 @@ public class TodoList {
 
     public void removeTask(String message) {
         this.list.remove(message);
+    }
+
+    public ArrayList<String> getTasksInAscendingOrder() {
+        return new ArrayList<>();
     }
 
     // Helper method.
