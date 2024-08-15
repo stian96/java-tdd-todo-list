@@ -55,7 +55,9 @@ public class TodoList {
     }
 
     public ArrayList<String> getTasksInDescendingOrder() {
-        return new ArrayList<>();
+        ArrayList<String> resultList = new ArrayList<>(this.list.keySet());
+        resultList.sort(Collections.reverseOrder());
+        return resultList;
     }
 
     // Helper method.
