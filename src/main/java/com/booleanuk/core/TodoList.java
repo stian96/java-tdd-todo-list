@@ -30,11 +30,11 @@ public class TodoList {
         return false;
     }
 
-    public String getTasks() {
+    public String getTasks(Boolean status) {
         StringBuilder result = new StringBuilder("\n");
 
         for (Map.Entry<String, Boolean> item : this.list.entrySet()) {
-            if (item.getValue().equals(true)) {
+            if (item.getValue().equals(status)) {
                 result.append(item.getKey()).append("\n");
             }
         }
