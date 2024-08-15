@@ -11,7 +11,7 @@ public class TodoList {
     }
 
     public void addTask(String message) {
-
+        list.put(message, false);
     }
 
 }
