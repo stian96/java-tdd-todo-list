@@ -23,8 +23,16 @@ public class TodoList {
     }
 
     public Boolean changeTaskStatus(String message, Boolean status) {
+        if (doesListContainKey(message)) {
+            this.list.put(message, status);
+            return true;
+        }
         return false;
     }
 
+    // Helper method.
+    private Boolean doesListContainKey(String key) {
+        return this.list.containsKey(key);
+    }
 
 }
