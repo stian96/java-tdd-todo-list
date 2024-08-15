@@ -2,7 +2,6 @@ package com.booleanuk.core;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 
 public class TodoList {
     public Map<String, Boolean> list;
@@ -22,5 +21,10 @@ public class TodoList {
         }
         return result.toString();
     }
+
+    public Boolean changeTaskStatus(String message, Boolean status) {
+        return false;
+    }
+
 
 }

@@ -1,10 +1,19 @@
 package com.booleanuk.core;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class TodoListTest {
+    TodoList todoList = new TodoList();
 
+
+    @BeforeEach
+    public void fillDummyData() {
+        todoList.addTask("Walk the dog");
+        todoList.addTask("Make dinner");
+        todoList.addTask("Read");
+    }
 
     @Test
     public void testAddTaskAddsATaskToTodoList() {
@@ -16,12 +25,12 @@ class TodoListTest {
 
     @Test
     public void testSeeAllTasksReturnTasksNicelyFormatted() {
-        TodoList todoList = new TodoList();
-        todoList.addTask("Walk the dog");
-        todoList.addTask("Make dinner");
-        todoList.addTask("Read");
-
         String testString = "\nRead\nMake dinner\nWalk the dog\n";
         Assertions.assertEquals(testString, todoList.seeAllTasks());
+    }
+
+    @Test
+    public void testChangeStatusChangesStatusOfSpecificTask() {
+        Assertions.assertTrue(todoList.changeTaskStatus("Read", true));
     }
 }
