@@ -30,7 +30,7 @@ public class TodoList {
         return false;
     }
 
-    public String getCompletedTasks() {
+    public String getTasks() {
         StringBuilder result = new StringBuilder("\n");
 
         for (Map.Entry<String, Boolean> item : this.list.entrySet()) {

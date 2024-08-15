@@ -22,4 +22,4 @@
 | **1**       | `addTask(String message)`                          | `void`     | Adds a task to the list and sets the boolean value to 'false' as default, <br/> indicating that the task is not completed. |
 | **2**       | `seeAllTasks()`                                    | `String`   | Returns all the tasks nicely formatted as a string.                                                                        |
 | **3**       | `changeTaskStatus(String message, Boolean status)` | `Boolean`  | Provide the task message and a boolean value to change the status of the task.                                             |
-| **4**       | `getCompletedTasks()`                              | `String`   | Provide the completed tasks as a nicely formatted string.                                                                  |
+| **4**       | `getTasks(Boolean status)`                         | `String`   | Provides tasks specified by the 'status' parameter as a nicely formatted string.                                           |

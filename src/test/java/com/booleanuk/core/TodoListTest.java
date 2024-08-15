@@ -32,9 +32,19 @@ class TodoListTest {
     }
 
     @Test
-    public void testGetCompletedTasksReturnsOnlyCompletedTasks() {
+    public void testGetTasksReturnsOnlyCompletedTasks() {
         todoList.changeTaskStatus("Walk the dog", true);
-        String testString = "\nWalk the dog\n";
-        Assertions.assertEquals(todoList.getCompletedTasks(), testString);
+        String completedTestString = "\nWalk the dog\n";
+        Assertions.assertEquals(todoList.getTasks(), completedTestString);
+    }
+
+    @Test
+    public void testGetTasksReturnsOnlyUncompletedTasks() {
+        todoList.changeTaskStatus("Walk the dog", true);
+        todoList.changeTaskStatus("Make dinner", true);
+
+        String uncompletedTestString = "\nRead\n";
+        Assertions.assertEquals(todoList.getTasks(), uncompletedTestString);
+
     }
 }
