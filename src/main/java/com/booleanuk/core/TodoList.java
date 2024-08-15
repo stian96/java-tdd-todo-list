@@ -42,7 +42,7 @@ public class TodoList {
     }
 
     public String searchForTask(String message) {
-        return "";
+        return this.list.containsKey(message) ? "Found" : "Not found";
     }
 
     // Helper method.
