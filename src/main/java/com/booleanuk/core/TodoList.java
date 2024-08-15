@@ -45,6 +45,9 @@ public class TodoList {
         return this.list.containsKey(message) ? "Found" : "Not found";
     }
 
+    public void removeTask(String message) {
+    }
+
     // Helper method.
     private Boolean doesListContainKey(String key) {
         return this.list.containsKey(key);

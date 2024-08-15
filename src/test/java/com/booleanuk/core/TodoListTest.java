@@ -55,4 +55,10 @@ class TodoListTest {
         result = todoList.searchForTask("Exercise");
         Assertions.assertEquals(result, "Not found");
     }
+
+    @Test
+    public void testIfRemoveTaskRemovesTaskFromTaskList() {
+        todoList.removeTask("Walk the dog");
+        Assertions.assertFalse(todoList.list.containsKey("Walk the dog"));
+    }
 }
