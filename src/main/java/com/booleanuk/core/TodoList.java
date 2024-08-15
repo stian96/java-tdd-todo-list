@@ -46,6 +46,7 @@ public class TodoList {
     }
 
     public void removeTask(String message) {
+        this.list.remove(message);
     }
 
     // Helper method.
