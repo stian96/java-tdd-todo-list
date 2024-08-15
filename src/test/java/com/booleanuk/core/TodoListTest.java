@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 class TodoListTest {
     TodoList todoList = new TodoList();
 
-
     @BeforeEach
     public void fillDummyData() {
         todoList.addTask("Walk the dog");
@@ -17,10 +16,7 @@ class TodoListTest {
 
     @Test
     public void testAddTaskAddsATaskToTodoList() {
-        TodoList todoList = new TodoList();
-        todoList.addTask("Walk the dog.");
-
-        Assertions.assertEquals(1, todoList.list.size());
+        Assertions.assertEquals(3, todoList.list.size());
     }
 
     @Test
@@ -32,5 +28,13 @@ class TodoListTest {
     @Test
     public void testChangeStatusChangesStatusOfSpecificTask() {
         Assertions.assertTrue(todoList.changeTaskStatus("Read", true));
+        Assertions.assertTrue(todoList.changeTaskStatus("Read", false));
+    }
+
+    @Test
+    public void testGetCompletedTasksReturnsOnlyCompletedTasks() {
+        todoList.changeTaskStatus("Walk the dog", true);
+        String testString = "\nWalk the dog\n";
+        Assertions.assertEquals(todoList.getCompletedTasks(), testString);
     }
 }

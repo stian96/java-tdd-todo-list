@@ -30,6 +30,10 @@ public class TodoList {
         return false;
     }
 
+    public String getCompletedTasks() {
+        return "";
+    }
+
     // Helper method.
     private Boolean doesListContainKey(String key) {
         return this.list.containsKey(key);
